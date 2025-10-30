@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegitables Sepl - Fresh from Farm to Your Doorstep</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+       
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Animated Background -->
+  <div class="bg-animation">
+   <div class="floating-leaf">
+    🍃
+   </div>
+   <div class="floating-leaf">
+    🌿
+   </div>
+   <div class="floating-leaf">
+    🍃
+   </div>
+   <div class="floating-leaf">
+    🌱
+   </div>
+   <div class="floating-leaf">
+    🍃
+   </div>
+   <div class="floating-leaf">
+    🌿
+   </div>
+   <div class="floating-leaf">
+    🍃
+   </div>
+   <div class="floating-leaf">
+    🌱
+   </div>
+  </div><!-- Navigation -->
+  <nav class="navbar">
+   <div class="nav-container"><a href="#" class="logo" onclick="showPage('home')">🥬 Vegitables Sepl</a>
+    <ul class="nav-menu">
+     <li><a href="#" class="nav-link" onclick="showPage('home')">Home</a></li>
+     <li><a href="#" class="nav-link" onclick="showPage('products')">Products</a></li>
+     <li><a href="#" class="nav-link" onclick="showPage('about')">About</a></li>
+     <li><a href="#" class="nav-link" onclick="showPage('contact')">Contact</a></li>
+    </ul>
+    <div class="cart-icon" onclick="showPage('cart')">
+     🛒 <span class="cart-count" id="cartCount">0</span>
+    </div>
+   </div>
+  </nav><!-- Main Content -->
+  <main class="main-content"><!-- Landing Page -->
+   <div id="home" class="page active">
+    <section class="hero">
+     <div class="hero-content">
+      <h1>Fresh from Farm to Your Doorstep</h1>
+      <p>Experience the finest selection of organic vegetables, harvested daily and delivered with care to ensure maximum freshness and nutrition for your family.</p>
+      <div class="cta-buttons"><button class="btn btn-primary" onclick="showPage('products')">Shop Now</button> <button class="btn btn-secondary" onclick="showPage('about')">Explore Products</button>
+      </div>
+     </div>
+    </section>
+   </div><!-- Products Page -->
+   <div id="products" class="page">
+    <div class="products-container">
+     <h1 class="page-title">Fresh Vegetables Collection</h1>
+     <div class="search-filter"><input type="text" class="search-input" placeholder="🔍 Search fresh vegetables..." id="searchInput" oninput="filterProducts()">
+     </div>
+     <div class="products-grid" id="productsGrid"><!-- Products will be dynamically loaded here -->
+     </div>
+    </div>
+   </div><!-- Cart Page -->
+   <div id="cart" class="page">
+    <div class="cart-container">
+     <h1 class="page-title">Your Shopping Cart</h1>
+     <div id="cartItems"><!-- Cart items will be dynamically loaded here -->
+     </div>
+     <div class="cart-total" id="cartTotal" style="display: none;">
+      <div class="total-amount" id="totalAmount">
+       Total: ₹0.00
+      </div><button class="btn btn-primary">Proceed to Checkout</button>
+    </div>
+    </div>
+   </div><!-- About Page -->
+   <div id="about" class="page">
+    <div class="about-container">
+     <div class="about-content">
+      <div class="about-icon">
+       🌱
+      </div>
+      <h2>About Vegitables Sepl</h2>
+      <p>At Vegitables Sepl, we believe that fresh, organic produce should be accessible to everyone. Founded with a passion for sustainable farming and healthy living, we work directly with local farmers to bring you the freshest vegetables straight from the farm to your table.</p>
+      <p>Our mission is simple: to provide you with the highest quality vegetables while supporting local agriculture and promoting environmental sustainability. Every vegetable in our collection is carefully selected, ensuring you receive only the best nature has to offer.</p>
+      <p>From crisp lettuce to vibrant tomatoes, each product represents our commitment to freshness, quality, and your health. Join us in our journey towards a healthier, more sustainable future where every meal is a celebration of nature's bounty.</p>
+     </div>
+    </div>
+   </div><!-- Contact Page -->
+   <div id="contact" class="page">
+    <div class="contact-container">
+     <h1 class="page-title">Get In Touch</h1>
+     <form class="contact-form" onsubmit="submitContactForm(event)">
+      <div class="form-group"><label for="name">Full Name</label> <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+      <div class="form-group"><label for="email">Email Address</label> <input type="email" id="email" name="email" required placeholder="Enter your email address">
+      </div>
+      <div class="form-group"><label for="message">Your Message</label> <textarea id="message" name="message" required placeholder="Tell us how we can help you with fresh vegetables..."></textarea>
+      </div><button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+     </form>
+     <div class="social-icons"><a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" title="Facebook">📘</a> <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a> <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" title="Twitter">🐦</a> <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" title="WhatsApp">💬</a>
+     </div>
+    </div>
+   </div>
+  </main><!-- Toast Notification -->
+  <div class="toast" id="toast"><span id="toastMessage"></span>
+  </div>
+  <script src="app.js">
+      
+    </script>
+ </body>
+</html>
